@@ -1,0 +1,40 @@
+{
+    "name": "mehdi-jalili/wp-embedder",
+    "description": "Embed PDF Files from the Media Library, Google Doc Viewer and or everywhere.",
+    "type": "wordpress-plugin",
+    "keywords": [
+        "pdf",
+        "embed",
+        "viewer",
+        "wp-embedder",
+        "block"
+    ],
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "Mehdi Jalili",
+            "email": "jalilimehdi.1366@gmail.com",
+            "homepage": "https://mehdijalili.ir",
+            "role": "Developer"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/mehdi-jalili/wp-embedder"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/mehdi-jalili/wp-embedder/issues",
+        "source": "https://github.com/mehdi-jalili/wp-embedder"
+    },
+    "prefer-stable": true,
+    "require": {
+        "php": ">=7.4"
+    },
+    "scripts": {
+        "post-update-cmd": [
+            "wp i18n make-pot . languages/wp-embedder.pot --exclude='/build'"
+        ]
+    }
+}

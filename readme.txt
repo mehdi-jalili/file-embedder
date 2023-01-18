@@ -27,17 +27,3 @@ Development on [GitHub](https://github.com/mehdi-jalili/wp-embedder). Pull reque
 
 # 1.0.0
 * initial commit
-
-## Screenshots
-![Wp Embedder block](./.wordpress-org/screenshot-1.png "Wp Embedder block")
-
-Embed PDF Viewer block
-
-![Select PDF](./.wordpress-org/screenshot-2.png "Select PDF")
-
-Select PDF
-
-
-![PDF block and attributes](./.wordpress-org/screenshot-3.png "PDF block and attributes")
-
-PDF block and attributes

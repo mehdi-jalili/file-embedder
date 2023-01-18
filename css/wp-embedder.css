@@ -1,0 +1,12 @@
+/*
+ * Because <object> doesn't scroll in iOS
+ * Hide <object> in iOS and hide <iframe> in not iOS
+ */
+@media only screen and (max-device-width: 1024px) {
+	object.wp-embedder { display:none; }
+	iframe.wp-embedder { display:block; }
+}
+@media only screen and (min-device-width : 1024px) {
+	object.wp-embedder { display:block; }
+	iframe.wp-embedder { display:none; }
+}

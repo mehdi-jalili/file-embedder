@@ -1,0 +1,66 @@
+# Copyright (C) 2023 Mehdi Jalili
+# This file is distributed under the GPLv2+.
+msgid ""
+msgstr ""
+"Project-Id-Version: Wp Embedder 2.2.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/embed-pdf-viewer\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2021-03-06T06:29:38+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.5.0-alpha\n"
+"X-Domain: embed-pdf-viewer\n"
+
+#. Plugin Name of the plugin
+#: blocks/src/index.js:133
+msgid "Wp Embedder"
+msgstr ""
+
+#. Plugin URI of the plugin
+msgid "https://github.com/mehdi-jalili/wp-embedder"
+msgstr ""
+
+#. Description of the plugin
+msgid "Embed PDF Files from the Media Library, Google Doc Viewer and or everywhere."
+msgstr ""
+
+#. Author of the plugin
+msgid "Mehdi Jalili"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://github.com/Mehdi-Jalili"
+msgstr ""
+
+#: blocks/src/index.js:84
+#: blocks/src/index.js:225
+msgid "PDF"
+msgstr ""
+
+#: blocks/src/index.js:85
+msgid "Drag a PDF, upload a new one or select a PDF from your library."
+msgstr ""
+
+#: blocks/src/index.js:136
+msgid "Long Description (optional)"
+msgstr ""
+
+#: blocks/src/index.js:139
+msgid "Long Description used for `title` tag and accessibility."
+msgstr ""
+
+#: blocks/src/index.js:144
+msgid "Width"
+msgstr ""
+
+#: blocks/src/index.js:150
+msgid "Height"
+msgstr ""
+
+#: blocks/src/index.js:169
+#: blocks/src/index.js:181
+msgid "Edit PDF"
+msgstr ""

@@ -1,0 +1,18 @@
+{
+  "name": "wp-embedder",
+  "description": "Block for embedding PDF documents.",
+  "version": "1.0.0",
+  "license": "GPL-2.0-or-later",
+  "main": "./src/index.js",
+  "devDependencies": {
+    "@wordpress/scripts": "12.1.1"
+  },
+  "scripts": {
+    "build": "wp-scripts build",
+    "start": "wp-scripts start"
+  },
+  "dependencies": {
+    "build": "^0.1.4",
+    "classnames": "^2.2.6"
+  }
+}
