@@ -1,4 +1,4 @@
-# Embed PDF Viewer
+# File Embedder
 
 Contributor: mehdi jalili
 Tags: pdf, embed, File Embedder, viewer, block
@@ -22,9 +22,9 @@ Development on [GitHub](https://github.com/mehdi-jalili/file-embedder). Pull req
 Pull requests are welcome against the `develop` branch.
 
 ## Screenshots
-![Embed PDF Viewer block](./.wordpress-org/screenshot-1.png "Embed PDF Viewer block")
+![File Embedder block](./.wordpress-org/screenshot-1.png "File Embedder block")
 
-Embed PDF Viewer block
+File Embedder block
 
 ![Select PDF](./.wordpress-org/screenshot-2.png "Select PDF")
 
