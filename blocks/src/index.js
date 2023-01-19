@@ -14,7 +14,7 @@ const isExternalPDF = (id, url) => url && !id && !isBlobURL(url);
 const renderEmbed = (props) => {
 	const { attributes: { title, description, url, width, height, align } } = props;
 	const style = { width, height };
-	const myClassName = getBlockDefaultClassName('wp-embedder/pdf');
+	const myClassName = getBlockDefaultClassName('file-embedder/pdf');
 
 	if (undefined === url || !url) {
 		return null;
@@ -23,7 +23,7 @@ const renderEmbed = (props) => {
 	return (
 		<figure className={`${myClassName}__content-wrapper align${align}`}>
 			<object
-				className="wp-embedder"
+				className="file-embedder"
 				data={url + '#scrollbar=1&toolbar=1'}
 				type="application/pdf"
 				height={style.height}
@@ -32,7 +32,7 @@ const renderEmbed = (props) => {
 			>
 			</object>
 			<iframe
-				className="wp-embedder"
+				className="file-embedder"
 				src={'https://docs.google.com/viewer?url=' + encodeURIComponent(url) + '&embedded=true'}
 				frameBorder="0"
 				height={style.height}
@@ -81,8 +81,8 @@ const renderEdit = (props) => {
 			<MediaPlaceholder
 				icon={icons.pdf}
 				labels={{
-					title: __('PDF', 'wp-embedder'),
-					instructions: __('Drag a PDF, upload a new one or select a PDF from your library.', 'wp-embedder'),
+					title: __('PDF', 'file-embedder'),
+					instructions: __('Drag a PDF, upload a new one or select a PDF from your library.', 'file-embedder'),
 				}}
 				onSelect={onSelectFile}
 				onSelectURL={updateAttribute('url')}
@@ -103,23 +103,20 @@ const renderEdit = (props) => {
 	let showRightHandle = false;
 	let showLeftHandle = false;
 
-	// See block-library/src/image/edit.js
+
 	if (align === 'center') {
-		// When the image is centered, show both handles.
+
 		showRightHandle = true;
 		showLeftHandle = true;
 	} else if (isRTL) {
-		// In RTL mode the image is on the right by default.
-		// Show the right handle and hide the left handle only when it is aligned left.
-		// Otherwise always show the left handle.
+
 		if (align === 'left') {
 			showRightHandle = true;
 		} else {
 			showLeftHandle = true;
 		}
 	} else {
-		// Show the left handle and hide the right handle only when the image is aligned right.
-		// Otherwise always show the right handle.
+
 		if (align === 'right') {
 			showLeftHandle = true;
 		} else {
@@ -130,25 +127,25 @@ const renderEdit = (props) => {
 	return (
 		<Fragment>
 			<InspectorControls>
-				<PanelBody title={__('Wp embedder', 'wp-embedder')} initialOpen={true}>
+				<PanelBody title={__('File Embedder', 'file-embedder')} initialOpen={true}>
 					<div>
 						<TextareaControl
-							label={__('Long Description (optional)', 'wp-embedder')}
+							label={__('Long Description (optional)', 'file-embedder')}
 							value={undefined === description ? '' : description}
 							onChange={updateAttribute('description')}
-							help={__('Long Description used for `title` tag and accessibility.', 'wp-embedder')}
+							help={__('Long Description used for `title` tag and accessibility.', 'file-embedder')}
 						/>
 						<TextControl
 							type="number"
 							min={20}
-							label={__('Width', 'wp-embedder')}
-							value={undefined === width ? embedPDFViewer.attributes.width.default : width}
+							label={__('Width', 'file-embedder')}
+							value={undefined === width ? FileEmbedder.attributes.width.default : width}
 							onChange={updateAttribute('width')}
 						/>
 						<TextControl
 							type="number"
-							label={__('Height', 'wp-embedder')}
-							value={undefined === height ? embedPDFViewer.attributes.height.default : height}
+							label={__('Height', 'file-embedder')}
+							value={undefined === height ? fileEmbedder.attributes.height.default : height}
 							min={1}
 							onChange={updateAttribute('height')}
 						/>
@@ -166,7 +163,7 @@ const renderEdit = (props) => {
 					{isExternal && (
 						<ToolbarButton
 							className="components-icon-button"
-							label={__('Edit PDF', 'wp-embedder')}
+							label={__('Edit PDF', 'file-embedder')}
 							onClick={toggleIsEditing}
 							icon="edit"
 						/>
@@ -178,7 +175,7 @@ const renderEdit = (props) => {
 							render={({ open }) => (
 								<Button
 									className="components-toolbar__control"
-									label={__('Edit PDF', 'wp-embedder')}
+									label={__('Edit PDF', 'file-embedder')}
 									onClick={open}
 									icon="edit"
 								/>
@@ -221,8 +218,8 @@ const renderEdit = (props) => {
 	);
 };
 
-let embedPDFViewer = registerBlockType('wp-embedder/pdf', {
-	title: __('PDF', 'wp-embedder'),
+let embedPDFViewer = registerBlockType('file-embedder/pdf', {
+	title: __('PDF', 'file-embedder'),
 	icon: icons.pdf,
 	category: 'embed',
 	attributes: {

@@ -1,2 +1,4 @@
-#### 1.0.0 - 2023-02-18
+#### [unreleased]
+
+#### 1.0
 * initial commit
